@@ -1,0 +1,173 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Основной шрифт для страницы */
+    background-color: #f0f2f5; /* Фоновый цвет для страницы */
+    display: flex; /* Используем Flexbox для выравнивания */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    min-height: 100vh; /* Устанавливаем минимальную высоту на весь экран */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 20px; /* Внутренние отступы страницы */
+    box-sizing: border-box; /* Устанавливаем box-sizing для учета padding и border в общую ширину и высоту */
+}
+
+.card-container {
+    display: flex; /* Используем Flexbox для размещения карточек */
+    flex-wrap: wrap; /* Позволяем карточкам переноситься на следующую строку при нехватке места */
+    gap: 30px; /* Расстояние между карточками */
+    justify-content: center; /* Центрируем карточки по горизонтали */
+    align-items: center; /* Центрируем карточки по вертикали */
+    height: 80%; /* Устанавливаем высоту контейнера на 100% */
+}
+
+.card_title {
+    background: linear-gradient(135deg, #6e8efb, #228B22); /* Градиентный фон карточки */
+    border-radius: 12px; /* Округленные углы карточки */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Тень для карточки */
+    padding: 25px; /* Внутренние отступы карточки */
+    text-align: center; /* Центрирование текста внутри карточки */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы для анимации */
+    width: 1000px; /* Ширина карточки */
+    color: #fff; /* Цвет текста внутри карточки */
+    position: relative; /* Относительное позиционирование для возможных дочерних элементов */
+    overflow: hidden; /* Обрезаем содержимое, выходящее за границы карточки */
+    display: flex; /* Flexbox для выравнивания содержимого */
+    flex-direction: column; /* Вертикальное расположение элементов внутри карточки */
+    justify-content: space-between; /* Равномерное распределение элементов по вертикали */
+    align-items: center; /* Центрирование содержимого по горизонтали */
+    min-height: 100px; /* Минимальная высота карточки */
+}
+
+.card {
+    background: linear-gradient(135deg, #6e8efb, #228B22); /* Градиентный фон карточки */
+    border-radius: 12px; /* Округленные углы карточки */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Тень для карточки */
+    padding: 25px; /* Внутренние отступы карточки */
+    text-align: center; /* Центрирование текста внутри карточки */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы для анимации */
+    width: 280px; /* Ширина карточки */
+    color: #fff; /* Цвет текста внутри карточки */
+    position: relative; /* Относительное позиционирование для возможных дочерних элементов */
+    overflow: hidden; /* Обрезаем содержимое, выходящее за границы карточки */
+    display: flex; /* Flexbox для выравнивания содержимого */
+    flex-direction: column; /* Вертикальное расположение элементов внутри карточки */
+    justify-content: space-between; /* Равномерное распределение элементов по вертикали */
+    align-items: center; /* Центрирование содержимого по горизонтали */
+    min-height: 700px; /* Минимальная высота карточки */
+}
+
+.card img {
+    border-radius: 80%; /* Округляем изображение до формы круга */
+    margin-bottom: 20px; /* Отступ снизу от изображения */
+    width: 180px; /* Ширина изображения */
+    height: 180px; /* Высота изображения */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы для анимации */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для изображения */
+    object-fit: cover; /* Сохраняем пропорции изображения */
+    background-color: #ddd; /* Фон на случай, если изображение не загрузится */
+}
+
+.card h2 {
+    font-size: 1.4em; /* Размер шрифта заголовка */
+    margin-bottom: 10px; /* Отступ снизу от заголовка */
+}
+
+.card p {
+    font-size: 0.9em; /* Размер шрифта основного текста */
+    margin: 5px 0; /* Отступы сверху и снизу от текста */
+    color: #e0e0e0; /* Цвет текста */
+}
+
+.card .bio {
+    font-size: 0.9em; /* Размер шрифта для биографии */
+    font-style: italic; /* Курсивное начертание текста */
+    margin-bottom: 15px; /* Отступ снизу от блока биографии */
+    line-height: 1.4em; /* Межстрочный интервал для улучшенной читаемости */
+    text-align: center; /* Центрирование текста */
+    flex-grow: 1; /* Позволяем блоку биографии занимать все доступное пространство */
+}
+
+.card .info {
+    margin-top: 15px; /* Отступ сверху для информации о пользователе */
+    text-align: center; /* Центрирование текста информации */
+}
+
+.card .info p {
+    display: flex; /* Flexbox для выравнивания иконок и текста */
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+    gap: 8px; /* Отступ между иконкой и текстом */
+}
+
+.card .icon {
+    font-size: 1.2em; /* Размер иконок */
+}
+
+.card .social-icons {
+    margin-top: auto; /* Размещаем блок с иконками социальных сетей у нижнего края карточки */
+}
+
+.card .social-icons a {
+    margin: 0 8px; /* Отступы между иконками социальных сетей */
+    display: inline-block; /* Блочное отображение иконок */
+    width: 32px; /* Ширина иконки */
+    height: 32px; /* Высота иконки */
+}
+
+.card .social-icons img {
+    width: 100%; /* Устанавливаем ширину иконки */
+    height: 100%; /* Устанавливаем высоту иконки */
+    filter: grayscale(100%); /* Применение черно-белого фильтра к иконкам */
+    transition: filter 0.3s ease; /* Плавный переход фильтра при наведении */
+}
+
+.card .social-icons a:hover img {
+    filter: grayscale(0%); /* Возвращение цвета иконки при наведении */
+}
+
+.card button {
+    background-color: #fff; /* Цвет фона кнопки */
+    color: #6e8efb; /* Цвет текста кнопки */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 25px; /* Округляем углы кнопки */
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+    font-size: 0.9em; /* Размер шрифта кнопки */
+    cursor: pointer; /* Изменение курсора на указатель при наведении */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы эффектов при наведении */
+    margin-top: 20px; /* Отступ сверху для кнопки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для кнопки */
+}
+
+.card_title button {
+    background-color: #fff; /* Цвет фона кнопки */
+    color: #6e8efb; /* Цвет текста кнопки */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 25px; /* Округляем углы кнопки */
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+    font-size: 0.9em; /* Размер шрифта кнопки */
+    cursor: pointer; /* Изменение курсора на указатель при наведении */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы эффектов при наведении */
+    margin-top: 5px; /* Отступ сверху для кнопки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для кнопки */
+
+.card button:hover {
+    background-color: #6e8efb; /* Изменение цвета фона кнопки при наведении */
+    color: #fff; /* Изменение цвета текста кнопки при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Увеличение тени кнопки при наведении */
+}
+
+.card:hover {
+    transform: translateY(-12px); /* Поднимаем карточку при наведении */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Увеличение тени карточки при наведении */
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Размещение карточек в столбик на маленьких экранах */
+        align-items: center; /* Центрирование карточек на маленьких экранах */
+    }
+
+    .card {
+        width: 90%; /* Устанавливаем ширину карточки на маленьких экранах */
+        margin-bottom: 20px; /* Отступ снизу для карточки */
+    }
+}
